@@ -11,11 +11,11 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
   return (
-    <nav className={cn("flex items-center justify-between py-4 px-6 rounded-xl bg-black/30 backdrop-blur-sm border border-white/10", className)}>
-      <Link to="/" className="flex items-center space-x-2">
+    <nav className={cn("flex flex-col items-center justify-center py-6 px-6", className)}>
+      <Link to="/" className="flex items-center mb-4">
         <MPALogo />
       </Link>
-      <div className="flex items-center space-x-1 md:space-x-4">
+      <div className="flex items-center justify-center space-x-4 md:space-x-8 bg-black/40 backdrop-blur-md px-8 py-3 rounded-full border border-white/10">
         <NavItem to="/" icon={<Home size={20} />}>Home</NavItem>
         <NavItem to="/setup" icon={<HelpCircle size={20} />}>How To Setup</NavItem>
         <NavItem to="/downloads" icon={<Download size={20} />}>Downloads</NavItem>
@@ -37,10 +37,10 @@ const NavItem: React.FC<NavItemProps> = ({ to, icon, children }) => {
   return (
     <Link 
       to={to} 
-      className="flex items-center px-3 py-2 rounded-lg hover:bg-white/10 text-white hover:text-mpa-blue transition-colors"
+      className="flex items-center px-3 py-2 text-white hover:text-mpa-blue transition-colors"
     >
-      <span className="mr-1 md:mr-2">{icon}</span>
-      <span className="hidden sm:inline">{children}</span>
+      <span className="mr-1">{icon}</span>
+      <span className="hidden md:inline text-sm font-medium">{children}</span>
     </Link>
   );
 };

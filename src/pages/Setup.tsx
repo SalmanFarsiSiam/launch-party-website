@@ -2,6 +2,7 @@
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import { Check } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 
 const Setup = () => {
   const setupSteps = [
@@ -24,16 +25,24 @@ const Setup = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <div className="container mx-auto px-4 pt-4 flex flex-col flex-1">
+    <div className="min-h-screen flex flex-col overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-mpa-darker to-black/90 -z-10"></div>
+      
+      <div className="container mx-auto px-4 flex flex-col flex-1">
         <Navigation />
         <div className="flex-1 flex flex-col items-center justify-center py-12">
-          <h1 className="text-4xl font-bold mb-10">How To <span className="text-mpa-blue">Setup</span></h1>
-          <div className="max-w-3xl w-full bg-black/50 backdrop-blur-sm rounded-lg p-6 border border-white/10">
-            <div className="space-y-8">
+          <h1 className="text-5xl font-bold mb-10">
+            How To <span className="bg-gradient-to-r from-white to-mpa-blue bg-clip-text text-transparent">Setup</span>
+          </h1>
+          <div className="max-w-3xl w-full backdrop-blur-md bg-black/40 rounded-xl p-8 border border-mpa-blue/20 relative overflow-hidden">
+            {/* Decorative elements */}
+            <div className="absolute -top-20 -right-20 w-40 h-40 bg-mpa-blue/10 rounded-full blur-[50px]"></div>
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-mpa-blue/5 rounded-full blur-[40px]"></div>
+            
+            <div className="space-y-10 relative z-10">
               {setupSteps.map((step, index) => (
-                <div key={index} className="flex">
-                  <div className="mr-4 bg-mpa-blue rounded-full h-8 w-8 flex items-center justify-center text-white">
+                <div key={index} className="flex items-start hover-glow p-4 rounded-lg transition-all duration-300">
+                  <div className="mr-6 bg-mpa-blue rounded-full h-10 w-10 flex items-center justify-center text-white shrink-0">
                     {index + 1}
                   </div>
                   <div>
@@ -43,11 +52,18 @@ const Setup = () => {
                 </div>
               ))}
             </div>
-            <div className="mt-10 text-center">
-              <button className="bg-mpa-blue text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors flex items-center space-x-2 mx-auto">
-                <Check size={20} />
-                <span>I'm Ready to Play</span>
-              </button>
+            
+            <div className="mt-12 text-center">
+              <div className="relative inline-block">
+                {/* Glowing effect */}
+                <div className="absolute -inset-1 bg-mpa-blue/30 rounded-full blur-md"></div>
+                <Button 
+                  className="relative bg-mpa-blue hover:bg-mpa-blue/80 text-white px-6 py-6 rounded-full transition-all duration-300 flex items-center space-x-3"
+                >
+                  <Check size={20} />
+                  <span>I'm Ready to Play</span>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
