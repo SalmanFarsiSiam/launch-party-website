@@ -12,14 +12,14 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
   return (
-    <nav className={cn("flex items-center justify-between py-6 px-6 w-full", className)}>
+    <nav className={cn("flex items-center justify-between py-6 px-6 w-full fixed top-0 z-50 bg-black/40 backdrop-blur-md", className)}>
       {/* Logo on left */}
       <Link to="/" className="flex items-center">
         <MPALogo />
       </Link>
       
       {/* Navigation in center - exactly centered */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center space-x-4 md:space-x-8 bg-black/40 backdrop-blur-md px-8 py-3 rounded-full border border-white/10">
+      <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center space-x-4 md:space-x-8">
         <NavItem to="/" icon={<Home size={20} />}>Home</NavItem>
         <NavItem to="/setup" icon={<HelpCircle size={20} />}>How To Setup</NavItem>
         <NavItem to="/downloads" icon={<Download size={20} />}>Downloads</NavItem>

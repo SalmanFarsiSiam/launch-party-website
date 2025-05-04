@@ -9,7 +9,7 @@ interface MPALogoProps {
 const MPALogo: React.FC<MPALogoProps> = ({ className }) => {
   return (
     <div className={cn("flex items-center", className)}>
-      <div className="text-mpa-blue font-bold text-3xl bg-gradient-to-r from-mpa-blue to-blue-300 bg-clip-text text-transparent">
+      <div className="text-mpa-blue font-bold text-2xl">
         <span>MPA</span>
       </div>
     </div>
