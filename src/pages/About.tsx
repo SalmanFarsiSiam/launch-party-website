@@ -4,8 +4,10 @@ import Navigation from '@/components/Navigation';
 
 const About = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <div className="container mx-auto px-4 pt-4 flex flex-col flex-1">
+    <div className="min-h-screen flex flex-col overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-mpa-darker to-black/90 -z-10 fixed"></div>
+      
+      <div className="container mx-auto px-4 flex flex-col flex-1">
         <Navigation />
         <div className="flex-1 flex flex-col items-center py-12">
           <h1 className="text-4xl font-bold mb-10">About <span className="text-mpa-blue">MPA</span></h1>
@@ -42,6 +44,20 @@ const About = () => {
             </div>
           </div>
         </div>
+
+        {/* Footer */}
+        <footer className="mt-auto py-6 border-t border-white/10">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-white/60 text-sm mb-4 md:mb-0">
+              © 2025 MPA Community. All rights reserved.
+            </div>
+            <div className="flex space-x-6">
+              <a href="#" className="text-white/60 hover:text-mpa-blue transition-colors">Terms of Service</a>
+              <a href="#" className="text-white/60 hover:text-mpa-blue transition-colors">Privacy Policy</a>
+              <a href="#" className="text-white/60 hover:text-mpa-blue transition-colors">Contact Us</a>
+            </div>
+          </div>
+        </footer>
       </div>
     </div>
   );
