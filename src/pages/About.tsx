@@ -4,8 +4,10 @@ import Navigation from '@/components/Navigation';
 
 const About = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <div className="container mx-auto px-4 pt-4 flex flex-col flex-1">
+    <div className="min-h-screen flex flex-col relative">
+      <div className="absolute inset-0 bg-gradient-to-b from-mpa-darker to-black/90 -z-10 fixed"></div>
+      
+      <div className="container mx-auto px-4 flex flex-col flex-1">
         <Navigation />
         <div className="flex-1 flex flex-col items-center py-12">
           <h1 className="text-4xl font-bold mb-10">About <span className="text-mpa-blue">MPA</span></h1>
@@ -42,6 +44,16 @@ const About = () => {
             </div>
           </div>
         </div>
+        
+        {/* Footer */}
+        <footer className="py-6 border-t border-white/10 mt-12 text-center">
+          <p className="text-gray-400 text-sm">&copy; 2025 Multi-Player Alliance. All rights reserved.</p>
+          <div className="flex justify-center space-x-4 mt-2">
+            <a href="#" className="text-gray-400 hover:text-mpa-blue transition-colors">Privacy Policy</a>
+            <a href="#" className="text-gray-400 hover:text-mpa-blue transition-colors">Terms of Service</a>
+            <a href="#" className="text-gray-400 hover:text-mpa-blue transition-colors">Contact</a>
+          </div>
+        </footer>
       </div>
     </div>
   );

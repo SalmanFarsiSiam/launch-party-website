@@ -36,7 +36,7 @@ const Downloads = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col relative">
       <div className="absolute inset-0 bg-gradient-to-b from-mpa-darker to-black/90 -z-10 fixed"></div>
       
       <div className="container mx-auto px-4 flex flex-col flex-1">

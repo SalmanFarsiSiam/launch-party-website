@@ -25,13 +25,13 @@ const Setup = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col overflow-hidden">
+    <div className="min-h-screen flex flex-col overflow-hidden relative">
       <div className="absolute inset-0 bg-gradient-to-b from-mpa-darker to-black/90 -z-10 fixed"></div>
       
       <div className="container mx-auto px-4 flex flex-col flex-1">
         <Navigation />
         <div className="flex-1 flex flex-col items-center justify-center py-12">
-          <h1 className="text-5xl font-bold mb-10">
+          <h1 className="text-5xl font-bold mb-10 text-center">
             How To <span className="bg-gradient-to-r from-white to-mpa-blue bg-clip-text text-transparent">Setup</span>
           </h1>
           <div className="max-w-3xl w-full backdrop-blur-md bg-black/40 rounded-xl p-8 border border-mpa-blue/20 relative overflow-hidden">

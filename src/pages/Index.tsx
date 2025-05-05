@@ -5,12 +5,12 @@ import Hero from '@/components/Hero';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col overflow-hidden">
+    <div className="min-h-screen flex flex-col overflow-hidden relative">
       <div className="absolute inset-0 bg-gradient-to-b from-mpa-darker to-black/90 -z-10 fixed"></div>
       
       {/* Main content container */}
       <div className="container mx-auto px-4 flex flex-col flex-1">
-        {/* Navigation at the top */}
+        {/* Navigation with fixed positioning */}
         <Navigation />
         
         {/* Hero section taking up the remaining space */}
