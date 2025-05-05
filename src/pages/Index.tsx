@@ -8,11 +8,11 @@ const Index = () => {
     <div className="min-h-screen flex flex-col overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-mpa-darker to-black/90 -z-10 fixed"></div>
       
-      {/* Navigation at the top */}
-      <Navigation />
-      
-      {/* Main content container with proper padding for fixed header */}
-      <div className="container mx-auto px-4 flex flex-col flex-1 pt-24">
+      {/* Main content container */}
+      <div className="container mx-auto px-4 flex flex-col flex-1">
+        {/* Navigation at the top */}
+        <Navigation />
+        
         {/* Hero section taking up the remaining space */}
         <div className="flex-1 flex items-center justify-center">
           <Hero />

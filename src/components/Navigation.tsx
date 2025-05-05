@@ -12,22 +12,20 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ className }) => {
   return (
-    <nav className={cn("flex items-center justify-between py-6 px-6 w-full fixed top-0 z-50 bg-black/40 backdrop-blur-md", className)}>
+    <nav className={cn("flex items-center justify-between py-6 px-6 w-full", className)}>
       {/* Logo on left */}
       <Link to="/" className="flex items-center">
         <MPALogo />
       </Link>
       
-      {/* Navigation in center - properly centered with background */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
-        <div className="flex items-center justify-center space-x-4 md:space-x-8 bg-black/40 backdrop-blur-md px-8 py-3 rounded-full border border-white/10">
-          <NavItem to="/" icon={<Home size={20} />}>Home</NavItem>
-          <NavItem to="/setup" icon={<HelpCircle size={20} />}>How To Setup</NavItem>
-          <NavItem to="/downloads" icon={<Download size={20} />}>Downloads</NavItem>
-          <NavItem to="/maps" icon={<Map size={20} />}>Maps</NavItem>
-          <NavItem to="/faq" icon={<Info size={20} />}>FAQ</NavItem>
-          <NavItem to="/about" icon={<Info size={20} />}>About</NavItem>
-        </div>
+      {/* Navigation in center - exactly centered */}
+      <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center space-x-4 md:space-x-8 bg-black/40 backdrop-blur-md px-8 py-3 rounded-full border border-white/10">
+        <NavItem to="/" icon={<Home size={20} />}>Home</NavItem>
+        <NavItem to="/setup" icon={<HelpCircle size={20} />}>How To Setup</NavItem>
+        <NavItem to="/downloads" icon={<Download size={20} />}>Downloads</NavItem>
+        <NavItem to="/maps" icon={<Map size={20} />}>Maps</NavItem>
+        <NavItem to="/faq" icon={<Info size={20} />}>FAQ</NavItem>
+        <NavItem to="/about" icon={<Info size={20} />}>About</NavItem>
       </div>
       
       {/* Profile on right */}

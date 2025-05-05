@@ -15,12 +15,12 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-mpa-blue/20 blur-[100px] rounded-full -z-10"></div>
       
       {/* Main content - styled to match the reference image */}
-      <h1 className="text-5xl md:text-7xl font-bold mb-6 relative">
+      <h1 className="text-6xl md:text-8xl font-bold mb-6 relative">
         <span className="text-mpa-blue">MPA</span>
         <span className="text-white"> Official Community</span>
       </h1>
       
-      <p className="text-sm md:text-lg text-gray-200 max-w-3xl mb-12 leading-relaxed uppercase tracking-wider font-medium">
+      <p className="text-sm md:text-base text-gray-200 max-w-3xl mb-12 leading-relaxed uppercase tracking-wider font-medium">
         An official gaming community working with IGI 2 multiplayer game and provided servers and various other services with real-time support to all players.
       </p>
       
