@@ -7,8 +7,9 @@ const About = () => {
     <div className="min-h-screen flex flex-col overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-mpa-darker to-black/90 -z-10 fixed"></div>
       
-      <div className="container mx-auto px-4 flex flex-col flex-1">
-        <Navigation />
+      <Navigation />
+      
+      <div className="container mx-auto px-4 flex flex-col flex-1 pt-24">
         <div className="flex-1 flex flex-col items-center py-12">
           <h1 className="text-4xl font-bold mb-10">About <span className="text-mpa-blue">MPA</span></h1>
           <div className="max-w-3xl w-full bg-black/50 backdrop-blur-sm rounded-lg p-8 border border-white/10">

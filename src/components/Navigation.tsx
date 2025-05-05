@@ -18,14 +18,16 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
         <MPALogo />
       </Link>
       
-      {/* Navigation in center - exactly centered */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center space-x-4 md:space-x-8">
-        <NavItem to="/" icon={<Home size={20} />}>Home</NavItem>
-        <NavItem to="/setup" icon={<HelpCircle size={20} />}>How To Setup</NavItem>
-        <NavItem to="/downloads" icon={<Download size={20} />}>Downloads</NavItem>
-        <NavItem to="/maps" icon={<Map size={20} />}>Maps</NavItem>
-        <NavItem to="/faq" icon={<Info size={20} />}>FAQ</NavItem>
-        <NavItem to="/about" icon={<Info size={20} />}>About</NavItem>
+      {/* Navigation in center - properly centered with background */}
+      <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+        <div className="flex items-center justify-center space-x-4 md:space-x-8 bg-black/40 backdrop-blur-md px-8 py-3 rounded-full border border-white/10">
+          <NavItem to="/" icon={<Home size={20} />}>Home</NavItem>
+          <NavItem to="/setup" icon={<HelpCircle size={20} />}>How To Setup</NavItem>
+          <NavItem to="/downloads" icon={<Download size={20} />}>Downloads</NavItem>
+          <NavItem to="/maps" icon={<Map size={20} />}>Maps</NavItem>
+          <NavItem to="/faq" icon={<Info size={20} />}>FAQ</NavItem>
+          <NavItem to="/about" icon={<Info size={20} />}>About</NavItem>
+        </div>
       </div>
       
       {/* Profile on right */}

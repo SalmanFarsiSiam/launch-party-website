@@ -32,8 +32,8 @@ const Setup = () => {
       <Navigation />
       
       <div className="container mx-auto px-4 flex flex-col flex-1 pt-24">
-        <div className="flex-1 flex flex-col items-center justify-center py-12">
-          <h1 className="text-5xl font-bold mb-10">
+        <div className="flex-1 flex flex-col items-center py-12">
+          <h1 className="text-5xl font-bold mb-10 text-center whitespace-nowrap">
             How To <span className="bg-gradient-to-r from-white to-mpa-blue bg-clip-text text-transparent">Setup</span>
           </h1>
           <div className="max-w-3xl w-full backdrop-blur-md bg-black/40 rounded-xl p-8 border border-mpa-blue/20 relative overflow-hidden">
